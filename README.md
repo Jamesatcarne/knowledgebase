@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Knowledge Base App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is designed as a project to teach web development. The app is made using the following technologies:
 
-## Available Scripts
+#### Frontend
 
-In the project directory, you can run:
+- React & Create React App
+- Tailwind CSS
+- AXIOS
 
-### `npm start`
+#### Backend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Firebase Auth
+- Firebase Firestore Database
+- Firebase Hosting
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Other
 
-### `npm test`
+- GitHub with GitHub Flow
+- GitHub Actions CICD
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting set up
 
-### `npm run build`
+Before starting we need to install some dependancies. We will need:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Nodejs LTS from [https://nodejs.org/en/]
+- Git from [https://git-scm.com/downloads]
+- A GitHub account set up here [https://github.com/]
+- VS Code installed from here [https://code.visualstudio.com/]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Once you have each of these you can create your new app. To do this open a terminal inside a folder where you will be saving your app, and type the
+following: npx create-react-app knowledge-base-frontend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You will likely get a prompt asking you if you are ok with the terminal installing some packages. Agreet to this (type y and press enter). You will then see
+some text in the terminal indicating the install is taking place. It will take up to a couple of minutes to complete. Once done you will have a new folder
+called knowledge-base-app, and inside this folder you'll see a collection of subfolders and files. This is your basic React app.
 
-### `npm run eject`
+Open the new folder inside VS code. Open a terminal in VS code. And type: npm run start. This will fire up the react app. If all is well you should see a
+message confirming that the app is running, and your default browser will open a screen at location localhost://3000 showing the create-react-app logo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Congratulations. You now have your default React project set up and you are ready to begin developing your frontend app.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The next steps should be to:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Remove the unecessary files made by Create React App
+- Edit the files left to the minimum necessary
+- Install the following dependancies via NPM
+  - Tailwind CSS (Allows us to create easy styles for the user interface)
+  - React Router V6 (Allows us to move the user around the website in a flexible way)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Structure of the App
 
-## Learn More
+The front end of the app is built using React. It has the following pages:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Home page that displays for users until they are logged in. Unauthorised users will not be able to get past this page.
+- List page that shows all your knowledge base articles.
+- Reader page that allows you to read a specific knowledge base article.
+- Creator page that allows you to build a new knowledge base article.
